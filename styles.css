@@ -15,7 +15,7 @@ body {
   display: none;
   grid-template-columns: 1fr 1fr;
   position: absolute;
-  font-size: 6vw;
+  font-size: 4.5vw;
   text-decoration: none;
   color:rgb(255, 255, 255);
   top: 40%;
@@ -30,10 +30,10 @@ body {
 
 #goBack {
   text-align: center;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
   position: absolute;
-  font-size: 6vw;
+  font-size: 4.5vw;
   text-decoration: none;
   color:rgb(255, 255, 255);
   left: 0%;
@@ -58,11 +58,9 @@ body {
   border: 5px solid rgb(255, 255, 255);
 }
 
-
-
 #choice1{
   float: left;
-  padding: 60px;
+  padding: 2vw;
   background-color: rgba(0, 0, 0, 0.514);
   display: grid;
   transition: background-color ease .3s;
@@ -76,7 +74,7 @@ body {
 
 #choice2{
   float: right;
-  padding: 60px;
+  padding: 2vw;
   background-color: rgba(0, 0, 0, 0.514);
   display: grid;
   transition: background-color ease .3s;
