@@ -19,21 +19,27 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '720',
-    width: '1280',
-    videoId: 'Cy7QOceNLsA',
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    },
-    playerVars: { 
-      'autoplay': 0,
-      'controls': 0, 
-      'rel' : 0,
-      'fs' : 0,
+  if (!window.safari !== undefined && !iOS()){
+    player = new YT.Player('player', {
+      height: '720',
+      width: '1280',
+      videoId: 'Cy7QOceNLsA',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      },
+      playerVars: { 
+        'autoplay': 0,
+        'controls': 0, 
+        'rel' : 0,
+        'fs' : 0,
+      }
+    });
+  } else {
+    err = document.getElementById('errorSafari');
+    err.style.display = "block";
   }
-  });
+  
 }
 
 // 4. The API will call this function when the video player is ready.
